@@ -2,8 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 if number < 0:
-    new_number = number * -1
-    last_digit = new_number % 10
+    last_digit = new_number % -10
 else:
     last_digit = number % 10
 if last_digit > 5:
