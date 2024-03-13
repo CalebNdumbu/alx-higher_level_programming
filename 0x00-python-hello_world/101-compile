@@ -1,6 +1,2 @@
 #!/bin/bash
-<<<<<<< HEAD
 python3 -m compileall -b $PYFILE i
-=======
-python3 -c "import py_compile; py_compile.compile('$PYFILE', '$PYFILE' + 'c')"
->>>>>>> d8322a27b2ed741caf9d86dbf1326f1bc679915c
