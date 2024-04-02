@@ -2,7 +2,7 @@
 """Defines a square"""
 
 class Square:
-    """defines a square by: (based on 1-square.py)"""
+    """A class that represents a square"""
 
     def __init__(self, size=0):
         """Initializing this square class
@@ -12,6 +12,7 @@ class Square:
             TypeError: if size is not integer
             ValueError: if size is less than zero
         """
+        self.__size = size
 
         if not isinstance(size, int):
             raise TypeError('size must be an integer')
