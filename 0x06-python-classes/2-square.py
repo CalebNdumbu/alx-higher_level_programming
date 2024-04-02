@@ -5,9 +5,9 @@ class Square:
     """defines a square by: (based on 1-square.py)"""
 
     def __init__(self, size=0):
-        """Initialize this square class
+        """Initializing this square class
         Args:
-            size: size of the square defined
+            size: represnets the size of the square defined
         Raises:
             TypeError: if size is not integer
             ValueError: if size is less than zero
