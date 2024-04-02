@@ -7,3 +7,4 @@ class Square:
         """Initialize square class
         """
         self.__size = size
+        
