@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""Defines a rectangle"""
+"""A class that defines a rectangle"""
+
 
 class Rectangle:
-    """represents a rectangle"""
-    
+    """this represents a rectangle"""
+
     def __init__(self, width=0, height=0):
-        """Initialize rectangle class
+        """Initializing this rectangle class
         Args:
-            width: represent the width of the rectangle
-            height: represent height of the rectangle
+            width: represents the width of the rectangle
+            height: represents the height of the rectangle
         Raises:
             TypeError: if size is not integer
             ValueError: if size is less than zero
