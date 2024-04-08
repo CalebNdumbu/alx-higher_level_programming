@@ -67,7 +67,10 @@ class Rectangle:
                 rectangle += "\n"
         return (rectangle)
 
-    def __repr__(self) -> str:
+    def __repr__(self):
         """return rectangle string representation"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-    
+
+    def __del__(self):
+        """Print a message once an object is deleted"""
+        print("Bye rectangle...")
