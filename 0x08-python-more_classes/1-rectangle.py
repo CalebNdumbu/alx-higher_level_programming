@@ -2,9 +2,8 @@
 """Defines a rectangle"""
 
 class Rectangle:
-    """Empty class"""
-    pass
-
+    """represents a rectangle"""
+    
     def __init__(self, width=0, height=0):
         """Initialize rectangle class
         Args:
