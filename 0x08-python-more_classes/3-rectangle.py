@@ -61,7 +61,7 @@ class Rectangle:
             return ("")
         rectangle = ""
         for column in range(self.__height):
-            for row in range(self.width):
+            for row in range(self.__width):
                 rectangle += "#"
             if column < self.__height - 1:
                 rectangle += "\n"
