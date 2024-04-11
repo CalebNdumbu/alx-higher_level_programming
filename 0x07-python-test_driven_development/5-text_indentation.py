@@ -6,7 +6,7 @@ Contains a function that indents texts
 
 """
 
-def text_identation(text):
+def text_indentation(text):
     """ Prints a text with two new lines after each '.' , '?' or ':'
 
     Args:
