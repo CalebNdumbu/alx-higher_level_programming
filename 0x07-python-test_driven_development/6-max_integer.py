@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+# !/usr/bin/python3
 """Module to find the max integer in a list
 """
 
@@ -16,3 +16,4 @@ def max_integer(list=[]):
             result = list[i]
         i += 1
     return result
+
