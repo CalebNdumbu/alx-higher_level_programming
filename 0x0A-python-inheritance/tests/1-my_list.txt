@@ -1,9 +1,4 @@
 # The ``1-my_list.py`` module
-============================================
-How to use 1-my_list.py
-============================================
-
-This library has one function ``print_sorted()``
 
 ``print_sorted`` returns a list of integers sorted in ascending order.
 
