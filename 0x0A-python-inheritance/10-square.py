@@ -14,3 +14,5 @@ class Square(Rectangle):
     def area(self):
         """Calculate are if square"""
         return self.__size ** 2
+    
+
