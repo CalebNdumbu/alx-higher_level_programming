@@ -2,11 +2,12 @@
 """base for other classes"""
 
 class Base:
+    """Represents base of all classes created """
+
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """ base constructor"""
-
+        """ """
         if id is not None:
             self.id = id
         else:
