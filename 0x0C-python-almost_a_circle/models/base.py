@@ -65,20 +65,21 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """loads file"""
-        filename = cls.__name__ + ".csv"
-        try:
-            with open(filename, "r", newline="") as csvfile:
-                if cls.__name__ == "Rectangle":
-                    fieldnames = ["id", "width", "height", "x", "y"]
-                else:
-                    fieldnames = ["id", "size", "x", "y"]
-                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
-                list_dicts = [dict([k, int(v)] for k, v in d.items())
-                              for d in list_dicts]
-                return [cls.create(**d) for d in list_dicts]
-        except IOError:
+        filename = "{}.json".format(cls.__name__)
+
+        if os.path.exists(filename) is False:
             return []
-        
+
+        with open(filename, 'r') as f:
+            list_str = f.read()
+
+        list_cls = cls.from_json_string(list_str)
+        list_ins = []
+
+        for index in range(len(list_cls)):
+            list_ins.append(cls.create(**list_cls[index]))
+
+        return list_ins      
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """Serializes list_objs and saves to file"""
