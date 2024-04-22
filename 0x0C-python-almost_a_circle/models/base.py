@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+# !/usr/bin/python3
 """base for other classes"""
 
 class Base:
@@ -6,7 +6,7 @@ class Base:
 
     def __init__(self, id=None):
         """ base constructor"""
-        
+
         if id is not None:
             self.id = id
         else:
