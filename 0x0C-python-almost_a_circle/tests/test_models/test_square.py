@@ -727,15 +727,6 @@ class TestSquare(unittest.TestCase):
         self.assertTrue(issubclass(Square, Base))
         self.assertFalse(isinstance(Square, Base))
 
-    # def test_10_3(self):
-    #     """Test Square class: check for missing args."""
-
-    #     with self.assertRaises(TypeError) as x:
-    #         s1 = Square()
-    #     self.assertEqual(
-    #         "__init__() missing 1 required positional argument: 'size'", str(
-    #             x.exception))
-
     def test_10_4(self):
         """Test Square for methods inherited from Rectangle."""
 
@@ -827,6 +818,8 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(len(s1_dictionary), len(s2_dictionary))
         self.assertEqual(type(s2_dictionary), dict)
         self.assertFalse(s1 == s2)
+
+
 
 if __name__ == '__main__':
     unittest.main()
