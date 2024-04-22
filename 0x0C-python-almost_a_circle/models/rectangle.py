@@ -84,21 +84,18 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
     
-    def  update(self, *args):
-        if len(args) >= 1:
-            self.id = args[0]
+    def  update(self, *args, **kwargs):
+        """Updates the attributes of the Rectangle instance."""
+        if args:
+            attrs = ["id", "width", "height", "x", "y"]
 
-        if len(args) >= 2:
-            self.width = args[1]
+            for key, arg in enumerate(args):
+                if key < len(attrs):
+                    setattr(self, attrs[key], arg)
 
-        if len(args) >= 3:
-            self.height = args[2]
-
-        if len(args) >= 4:
-            self.x = args[3]
-
-        if len(args) >= 5:
-            self.y = args[4]
+            else:
+                for key, value in kwargs.items():
+                    setattr(self, key, value)
 
     def __str__(self):
         """Overrides the default __str__ method to return a string representation."""
