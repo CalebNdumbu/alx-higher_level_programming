@@ -1,65 +1,105 @@
 # !/usr/bin/python3
-
-"""Defines a Rectangle class that inherits from Base."""
+"""Rectangle class inherits from Base"""
 
 from models.base import Base
 
+
 class Rectangle(Base):
-    """Represent a rectangle."""
+    """Rectangle class inherits from Base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """constructor to init a new rectangle
-
-        Args:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
-            x (int, optional): The x-coordinate of the rectangle's position.
-            y (int, optional): The y-coordinate of the rectangle's position.
-            id (int, optional): The identity of the rectangle.
-        """
+        """Rectangle class constructor"""
         super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
 
-        @property
-        def width(self):
-            """Get width of rectangles"""
+    def area(self):
+        """Returns the area of the rectangle"""
+        return self.width *self.height
+    
+    def display(self):
+        """Prints the Rectangle instance with the character #"""
 
-            return self.__width
-        
-        @width.setter
-        def width(self, value):
-            """set width of the rectangle"""
-            self.__width = value
+        for _ in range(self.y):
+            print()
+        for _ in range(self.height):
+            print(" " * self.x, end="")
+            print("#" * self.width)
+    
+    @property
+    def width(self):
+        """Getter for width"""
+        return self.__width
 
-        @property
-        def height(self):
-            """Get the height of the rectangle."""
-            return self.__height
+    @width.setter
+    def width(self, value):
+        """Setter for width"""
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
 
-        @height.setter
-        def height(self, value):
-            """Set the height of the rectangle."""
-            self.__height = value  
+    @property
+    def height(self):
+        """Getter for height"""
+        return self.__height
 
-        @property
-        def x(self):
-            """Gets the x-cordinate of rectangle position"""
-            return self.__x      
-        
-        @x.setter
-        def x(self, value):
-            """set x attribute of the rectangle"""
-            self.__x = value
+    @height.setter
+    def height(self, value):
+        """Setter for height"""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        elif value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
 
-        @property
-        def y(self):
-            """Get the y cordinate of the rectangle"""
-            return self.__y
-        
-        @y.setter
-        def y(self, value):
-            """set x cordinate of the rectangle"""
-            self.__y = value
+    @property
+    def x(self):
+        """Getter for x"""
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        """Setter for x"""
+        if not isinstance(value, int):
+            raise TypeError("x must be an integer")
+        elif value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
+
+    @property
+    def y(self):
+        """Getter for y"""
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        """Setter for y"""
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        elif value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
+    
+    def  update(self, *args):
+        if len(args) >= 1:
+            self.id = args[0]
+
+        if len(args) >= 2:
+            self.width = args[1]
+
+        if len(args) >= 3:
+            self.height = args[2]
+
+        if len(args) >= 4:
+            self.x = args[3]
+
+        if len(args) >= 5:
+            self.y = args[4]
+
+    def __str__(self):
+        """Overrides the default __str__ method to return a string representation."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
