@@ -120,21 +120,25 @@ class Base:
         """ Opens a window and draws all the Rectangles and Squares
         """
         turt = turtle.Turtle()
-        turt.screen.bgcolor("#b7312c")
+        turt.screen.bgcolor("#741f1c")
         turt.pensize(3)
         turt.shape("turtle")
 
-        turt.color("#ffffff")
+        turt.color("#eeeeee")
         for rect in list_rectangles:
             turt.showturtle()
             turt.up()
             turt.goto(rect.x, rect.y)
             turt.down()
-            for i in range(2):
-                turt.forward(rect.width)
-                turt.left(90)
-                turt.forward(rect.height)
-                turt.left(90)
+
+            turt.forward(rect.width)
+            turt.left(90)
+            turt.forward(rect.height)
+            turt.left(90)
+            turt.forward(rect.width)
+            turt.left(90)
+            turt.forward(rect.height)
+
             turt.hideturtle()
 
         turt.color("#b5e3d8")
