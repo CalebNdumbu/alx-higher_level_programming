@@ -48,5 +48,5 @@ Each script is accompanied by a brief description of its functionality and usage
 
 ## Repository Information
 
-- **GitHub Repository:** [alx-higher_level_programming](https://github.com/username/alx-higher_level_programming)
+- **GitHub Repository:** [alx-higher_level_programming](https://github.com/CalebNdumbu/alx-higher_level_programming)
 - **Directory:** 0x02-python-import_modules
