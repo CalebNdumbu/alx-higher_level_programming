@@ -1,4 +1,3 @@
-```markdown
 # Python Data Structures
 
 This repository contains solutions to various tasks related to Python data structures from the ALX Higher Level Programming curriculum.
@@ -100,9 +99,7 @@ This repository contains solutions to various tasks related to Python data struc
     - You are not allowed to import any module.
 
 13. **Switch**
-    -
-
- Complete the source code to switch the values of a and b.
+    - Complete the source code to switch the values of a and b.
     - You can find the source code in the repository.
 
 14. **Linked list palindrome**
@@ -113,3 +110,4 @@ This repository contains solutions to various tasks related to Python data struc
     
 15. **CPython #0: Python lists**
     - Create a C function that prints some basic info about Python lists.
+
